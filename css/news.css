@@ -1,0 +1,82 @@
+/*====================================================================  */
+/* Clean up headings styles */
+.main-content>.info>h2{
+  text-align: center;
+}
+
+.main-content>.info>img{
+  max-width: 100vw;
+  height: auto;
+}
+
+/*====================================================================  */
+/* news block styles */
+
+.main-content>.newsletter>.news{
+  display: flex;
+  flex-direction: column;
+}
+.main-content>.newsletter{
+  padding:1em;
+}
+
+/*====================================================================  */
+/* subscribe block styles */
+
+/* .main-content>.subscribe{
+  padding:1em;
+}
+
+.main-content>.subscribe{
+  text-align: right;
+  width: 50%;
+} */
+
+
+/*====================================================================  */
+/*====================================================================  */
+/*====================================================================  */
+/*====================================================================  */
+/* Desktop Content  styles */
+
+@supports (grid-area:auto) {
+  @media screen and (min-width: 75em) {
+    .main-content>.newsletter{
+      grid-area:news;
+    }
+
+    .main-content>.info>img{
+      max-width: 100%;
+      height: auto;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden
+    }
+
+
+    .main-content{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap:1em;
+      grid-template-areas:
+      ". info news";
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Extend page */
