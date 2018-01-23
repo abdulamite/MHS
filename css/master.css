@@ -88,7 +88,7 @@ body{
 }
 
 /*====================================================================  */
-/* Main Content>blockquote styles */
+/* Main Content>main-content styles */
 .container>.content-panel>.main-content{
   flex:1;
   margin-bottom: 2em;
@@ -98,7 +98,8 @@ body{
 .container>.content-panel>.main-content>blockquote{
   font-style: italic;
   padding: 2em;
-  background-color: #ffaaa72e;
+  background-color: #FAFAFA;
+  font-size: 24px;
 }
 
 
@@ -123,6 +124,7 @@ body{
   flex-direction: column;
   margin: 1em;
   text-align: center;
+  align-self: start;
 }
 .container>.content-panel>.main-content>.member-join>p{
   margin-bottom: 1em;
@@ -183,20 +185,17 @@ body{
     }
 
     blockquote{
-      margin: 1em;
       grid-area:quote;
-      width: 300px;
-      justify-self: center;
-      margin: auto;
+      text-align: center;
     }
 
     .main-content{
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
-      grid-auto-rows:  1fr 1fr 1fr;
+      grid-gap: 10px;
       grid-template-areas:
-      "quote info join"
-      ". info ."
+      "quote quote quote"
+      ". info join"
       ". info ."
     }
 
