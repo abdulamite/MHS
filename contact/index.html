@@ -1,0 +1,62 @@
+---
+layout: new_layout
+title: Contact Us
+---
+<form action="https://formspree.io/abdulamite@gmail.com" method="POST">
+            <input type="text" placeholder="Full Name" name="Full Name">
+            <input type="text" placeholder="Email Address" name="Email">
+            <textarea name="Message" rows="8" cols="80" placeholder="Message"></textarea>
+            <input type="submit" value="Submit">
+</form>
+<style>
+/*====================================================================  */
+/* form cards styles */
+
+.info>form{
+  display: flex;
+  flex-direction: column;
+}
+.info>form>input,textarea{
+  font-family: 'Crimson Text', serif;
+  padding: 1em;
+  margin: 1em;
+  font-size: 18px;
+  border:solid black 1px;
+}
+textarea{
+  border: solid black 1px;
+}
+.info>form>input[type="submit"]{
+  background-color: #822b2f;
+  color: white;
+  border: none;
+}
+
+/*====================================================================  */
+/*====================================================================  */
+/*====================================================================  */
+/*====================================================================  */
+/* Desktop Content  styles */
+/* This is done to make full use of the content area  */
+
+@supports (grid-area:auto) {
+  @media screen and (min-width: 75em) {
+
+    .map{
+      grid-area: map;
+    }
+    .container>.content-panel>.main-content{
+      margin-bottom: 0;
+    }
+    .main-content{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-auto-rows:  1fr 1fr 1fr;
+      grid-template-areas:
+      ". info ."
+      ". info . "
+      ". info ."
+    }
+  }
+}
+</style>

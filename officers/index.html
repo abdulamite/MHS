@@ -1,0 +1,167 @@
+---
+layout: new_layout
+title: Officers
+---
+<h3>Board of Directors</h3>
+  <div class="officer-cards">
+        <div class="box">
+          <img src="../imgs/doggo.jpg" alt="Abdul Shaikh Profile">
+          <div class="officer-info">
+            <h4>Christ Vargas</h4>
+            <p>President</p>
+          </div>
+        </div>
+
+        <div class="box">
+          <img src="../imgs/doggo.jpg" alt="Abdul Shaikh Profile">
+          <div class="officer-info">
+            <h4>John Reed</h4>
+            <p>President</p>
+          </div>
+        </div>
+
+        <div class="box">
+          <img src="../imgs/doggo.jpg" alt="Abdul Shaikh Profile">
+          <div class="officer-info">
+            <h4>Barbara Garvia-Guzman</h4>
+            <p>President</p>
+          </div>
+        </div>
+
+        <div class="box">
+          <img src="../imgs/doggo.jpg" alt="Abdul Shaikh Profile">
+          <div class="officer-info">
+            <h4>Kathleen Rabago</h4>
+            <p>President</p>
+          </div>
+        </div>
+
+        <div class="box">
+          <img src="../imgs/doggo.jpg" alt="Abdul Shaikh Profile">
+          <div class="officer-info">
+            <h4>Esabel Reed</h4>
+            <p>President</p>
+          </div>
+        </div>
+
+        <div class="box">
+          <img src="../imgs/doggo.jpg" alt="Abdul Shaikh Profile">
+          <div class="officer-info">
+            <h4>Varonica Diaz</h4>
+            <p>President</p>
+          </div>
+        </div>
+
+        <div class="box">
+          <img src="../imgs/doggo.jpg" alt="Abdul Shaikh Profile">
+          <div class="officer-info">
+            <h4>Alison Bruesehoff</h4>
+            <p>President</p>
+          </div>
+        </div>
+
+  </div>
+
+
+  <h3 class="appointed">Appointed Chairpersons</h3>
+  <div class="officer-cards">
+        <div class="box">
+          <img src="../imgs/doggo.jpg" alt="Abdul Shaikh Profile">
+          <div class="officer-info">
+            <h4>Arlene Sandoval</h4>
+            <p>President</p>
+          </div>
+        </div>
+
+        <div class="box">
+          <img src="../imgs/doggo.jpg" alt="Abdul Shaikh Profile">
+          <div class="officer-info">
+            <h4>Mary Jordan</h4>
+            <p>President</p>
+          </div>
+        </div>
+
+        <div class="box">
+          <img src="../imgs/doggo.jpg" alt="Abdul Shaikh Profile">
+          <div class="officer-info">
+            <h4>Caronlina Ibarra-Mendoza</h4>
+            <p>President</p>
+          </div>
+        </div>
+
+        <div class="box">
+          <img src="../imgs/doggo.jpg" alt="Abdul Shaikh Profile">
+          <div class="officer-info">
+            <h4>Susan Tinkley</h4>
+            <p>President</p>
+          </div>
+        </div>
+  </div>
+
+<style>
+
+/*====================================================================  */
+/* Page Heading styles */
+.info>h2,h3{
+  text-align: center;
+}
+
+/*====================================================================  */
+/* Officer cards styles */
+.officer-cards{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-around;
+  width: 75%;
+  margin: auto;
+}
+
+.box{
+  height: 400px;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  margin: 1em;
+  justify-content: space-around;
+}
+
+.box>img{
+    width: 100%;
+    height: auto;
+    border-radius: 122px;
+}
+
+.box>*{
+  text-align:center;
+}
+.box>.officer-info{
+  justify-content: flex-end;
+}
+
+.appointed{
+  margin-top: 1em;
+}
+
+
+/*====================================================================  */
+/*====================================================================  */
+/*====================================================================  */
+/*====================================================================  */
+/* Desktop Content  styles */
+/* This is done to make full use of the content area  */
+
+@supports (grid-area:auto) {
+  @media screen and (min-width: 75em) {
+
+    .main-content{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-auto-rows:  1fr 1fr 1fr;
+      grid-template-areas:
+      "info info info"
+      "info info info"
+      "info info info"
+    }
+  }
+}
+</style>
