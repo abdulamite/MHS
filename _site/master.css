@@ -144,11 +144,22 @@ body{
 
 .insta{
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 .insta h3{
-  margin-bottom: 1em; 
+  margin-bottom: 1em;
 }
 
+.insta>a{
+  background-color: #822b2f;
+  border: none;
+  width: 50%;
+  margin: auto;
+  color:white;
+  margin-top: 1em;
+  padding: 15px;
+}
 /*====================================================================  */
 /* Footer Content  styles */
 footer{
@@ -175,7 +186,10 @@ footer{
 .loc>a {
     color: white;
 }
-
+.socials>img{
+  height: 30px;
+  width: auto;
+}
 /*====================================================================  */
 /*====================================================================  */
 /*====================================================================  */
@@ -209,12 +223,12 @@ footer{
 
     .main-content{
       display: grid;
-      grid-template-columns: 1fr 2fr 1fr;
-      grid-gap: 10px;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 25px;
       grid-template-areas:
       "quote quote quote"
       ". info join"
-      ". insta ."
+      "insta insta insta"
     }
 
     footer{
