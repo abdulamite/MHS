@@ -186,6 +186,9 @@ footer{
 .loc>a {
     color: white;
 }
+.socials{
+  margin-top:15px;
+}
 .socials>img{
   height: 30px;
   width: auto;
