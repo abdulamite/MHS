@@ -15,7 +15,7 @@ title: Join Now
             <input type="text" placeholder="Full Name" name="Full Name">
             <input type="text" placeholder="Email Address" name="Email">
             <textarea name="Message" rows="8" cols="80" placeholder="Tell us why you are interested in joining the Montebello Historical Society"></textarea>
-            <div netlify-recaptcha></div>
+            <div class="recaptcha" netlify-recaptcha></div>
             <input type="submit" value="Submit">
 </form>
 <style>
@@ -45,6 +45,10 @@ textarea{
   background-color: #822b2f;
   color: white;
   border: none;
+}
+
+.recaptcha{
+  margin: auto;
 }
 
 /*====================================================================  */
