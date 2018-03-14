@@ -91,7 +91,7 @@ body{
 /* Main Content>main-content styles */
 .container>.content-panel>.main-content{
   flex:1;
-  margin-bottom: 2em;
+  margin: 1em;
 }
 /*====================================================================  */
 /* Main Content>blockquote styles */
