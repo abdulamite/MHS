@@ -54,7 +54,7 @@ body{
 /* Header styles */
 .container>.content-panel>header{
   text-align: center;
-  height: 4em;
+  height: auto;
   padding: 1em;
 }
 
@@ -70,6 +70,7 @@ body{
 
 .container>.content-panel>header>a>h2{
   font-family: 'Raleway', sans-serif;
+  text-transform: capitalize;
 }
 
 

@@ -54,7 +54,7 @@ body{
 /* Header styles */
 .container>.content-panel>header{
   text-align: center;
-  height: 4em;
+  height: auto;
   padding: 1em;
 }
 
@@ -70,6 +70,7 @@ body{
 
 .container>.content-panel>header>a>h2{
   font-family: 'Raleway', sans-serif;
+  text-transform: capitalize;
 }
 
 
@@ -91,7 +92,7 @@ body{
 /* Main Content>main-content styles */
 .container>.content-panel>.main-content{
   flex:1;
-  margin-bottom: 2em;
+  margin: 1em;
 }
 /*====================================================================  */
 /* Main Content>blockquote styles */
@@ -107,14 +108,10 @@ body{
 /* Main Content > info styles */
 .info{
   flex:1;
-
-}
-.container>.content-panel>.main-content>.info>h3{
-  padding: .5em;
 }
 .container>.content-panel>.main-content>.info>p{
-  padding: .8em;
   font-family: 'Crimson Text', serif;
+  margin-bottom: 25px
 }
 
 /*====================================================================  */
