@@ -113,8 +113,8 @@ body{
   padding: .5em;
 }
 .container>.content-panel>.main-content>.info>p{
-  padding: .8em;
   font-family: 'Crimson Text', serif;
+  margin-bottom: 25px
 }
 
 /*====================================================================  */
@@ -226,7 +226,7 @@ footer{
 
     .main-content{
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 2fr 1fr;
       grid-gap: 25px;
       grid-template-areas:
       "quote quote quote"
