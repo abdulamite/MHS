@@ -107,10 +107,6 @@ body{
 /* Main Content > info styles */
 .info{
   flex:1;
-
-}
-.container>.content-panel>.main-content>.info>h3{
-  padding: .5em;
 }
 .container>.content-panel>.main-content>.info>p{
   font-family: 'Crimson Text', serif;
@@ -226,7 +222,7 @@ footer{
 
     .main-content{
       display: grid;
-      grid-template-columns: 1fr 2fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
       grid-gap: 25px;
       grid-template-areas:
       "quote quote quote"
