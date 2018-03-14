@@ -11,10 +11,10 @@ title: Join Now
   <li>...</li>
   <li>...</li>
 </ul>
-<form name ="join" method="POST" netlify>
-            <input type="text" placeholder="Full Name" name="Full Name">
-            <input type="text" placeholder="Email Address" name="Email">
-            <textarea name="Message" rows="8" cols="80" placeholder="Tell us why you are interested in joining the Montebello Historical Society"></textarea>
+<form name="join" method="POST" netlify>
+            <input type="text" placeholder="Full Name" name="Full Name" required>
+            <input type="text" placeholder="Email Address" name="Email" required>
+            <textarea name="Message" rows="8" cols="80" placeholder="Tell us why you are interested in joining the Montebello Historical Society" required></textarea>
             <div class="recaptcha" netlify-recaptcha></div>
             <input type="submit" value="Submit">
 </form>
@@ -29,7 +29,7 @@ title: Join Now
 .info>form>input,textarea{
   font-family: 'Crimson Text', serif;
   padding: 1em;
-  margin: 1em;
+  margin-bottom: 20px;
   font-size: 18px;
   border:solid black 1px;
 }

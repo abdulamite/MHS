@@ -2,10 +2,11 @@
 layout: new_layout
 title: Contact Us
 ---
-<form action="https://formspree.io/abdulamite@gmail.com" method="POST">
-            <input type="text" placeholder="Full Name" name="Full Name">
-            <input type="text" placeholder="Email Address" name="Email">
-            <textarea name="Message" rows="8" cols="80" placeholder="Message" maxlength="500"></textarea>
+<form name="contact" method="POST" netlify>
+            <input type="text" placeholder="Full Name" name="Full Name" required>
+            <input type="text" placeholder="Email Address" name="Email" required>
+            <textarea name="Message" rows="8" cols="80" placeholder="Message" required></textarea>
+            <div class="recaptcha" netlify-recaptcha></div>
             <input type="submit" value="Submit">
 </form>
 <style>
@@ -21,6 +22,7 @@ title: Contact Us
   padding: 1em;
   font-size: 18px;
   border:solid black 1px;
+  margin-bottom: 20px;
 }
 textarea{
   border: solid black 1px;
@@ -29,6 +31,10 @@ textarea{
   background-color: #822b2f;
   color: white;
   border: none;
+}
+
+.recaptcha{
+  margin: auto;
 }
 
 /*====================================================================  */
