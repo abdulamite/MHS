@@ -157,6 +157,9 @@ body{
   margin-top: 1em;
   padding: 15px;
 }
+.insta>h2{
+  margin-bottom: 1em;
+}
 /*====================================================================  */
 /* Footer Content  styles */
 footer{
@@ -219,6 +222,10 @@ footer{
 
     .insta{
       grid-area:insta;
+    }
+
+    .container>.content-panel>.main-content{
+      margin: 0;
     }
 
     .main-content{
