@@ -101,9 +101,39 @@ body{
   padding: 2em;
   background-color: #FAFAFA;
   font-size: 24px;
+  text-transform: uppercase;
 }
 
+/*====================================================================  */
+/* Feature Styles */
+.features{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+  justify-content: space-around;
+  flex:1;
+  margin-top: 20px;
+}
 
+.feature{
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* background-color: red; */
+  margin-bottom: 10px;
+  height: 300px;
+}
+
+.feature>img{
+  height: 150px;
+  width: auto;
+  border-radius: 100%;
+}
+.feature>p{
+  text-align: center;
+}
 /*====================================================================  */
 /* Main Content > info styles */
 .info{
@@ -111,7 +141,7 @@ body{
 }
 .container>.content-panel>.main-content>.info>p{
   font-family: 'Crimson Text', serif;
-  margin-bottom: 25px
+  margin-bottom: 25px;
 }
 
 /*====================================================================  */
@@ -228,12 +258,17 @@ footer{
       margin: 0;
     }
 
+    .features{
+      grid-area: ft;
+    }
+
     .main-content{
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       grid-gap: 25px;
       grid-template-areas:
       "quote quote quote"
+      "ft ft ft"
       ". info join"
       "insta insta insta"
     }
