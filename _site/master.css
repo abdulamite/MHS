@@ -145,7 +145,6 @@ body{
 }
 .container>.content-panel>.main-content>.info>p{
   font-family: 'Crimson Text', serif;
-  margin-bottom: 25px;
 }
 
 /*====================================================================  */
@@ -154,8 +153,17 @@ body{
   padding: 0 !important;
 }
 .historical-image>img{
-  height: 300px;
-  width: auto;
+  width: 100%;
+}
+
+/*====================================================================  */
+/* Main Content > events image styles */
+.events-info{
+  padding: 0 !important;
+}
+.events-info>img{
+  height: auto;
+  width: 100%;
 }
 /*====================================================================  */
 /* instafeed  styles */
