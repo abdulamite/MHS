@@ -103,7 +103,6 @@ body{
   padding: 2em;
   background-color: #FAFAFA;
   font-size: 24px;
-  text-transform: uppercase;
 }
 
 /*====================================================================  */
@@ -129,8 +128,8 @@ body{
 }
 
 .feature>img{
-  height: 200px;
-  width: auto;
+  height: 250px;
+  width: 250px;
   border-radius: 100%;
   margin-bottom: 2em;
 }
