@@ -13,4 +13,15 @@ title: Museum
   p{
     margin-bottom: 1em;
   }
+  @supports (grid-area:auto) {
+  @media screen and (min-width: 75em) {
+    .main-content{
+      display: grid;
+      grid-template-columns: 1fr 2fr 1fr;
+      grid-gap:1em;
+      grid-template-areas:
+      ". info .";
+    }
+  }
+  }
 </style>
