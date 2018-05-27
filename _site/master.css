@@ -203,6 +203,11 @@ footer{
   padding: 1em 0px 1em 0px;
 }
 
+footer>img {
+    height: auto;
+    width: 300px;
+    margin: auto;
+}
 .container>.content-panel>footer>h3{
   margin-top: 1em;
 }
