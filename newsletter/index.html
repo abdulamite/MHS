@@ -1,9 +1,10 @@
 ---
 layout: new_layout
 title: Newsletter
+description: The Montebello Historical Society Newsletter Archive provides a look back at the events and history of this institution. The archives page is updated monthly and provides information about history during the month, upcoming event, and important updates. Take a look around and learn more about Montebello History!
 ---
 <img src="https://images.unsplash.com/photo-1503694978374-8a2fa686963a?auto=format&fit=crop&w=1350&q=80" alt="Newspaper Press">
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident dolorum eaque, earum iure, aperiam eius voluptate necessitatibus perferendis ad fugiat sed ea iusto magnam velit repellendus atque pariatur molestiae cupiditate facilis corporis id? Eos consequuntur ratione facere velit modi voluptate deserunt corporis inventore ut a, amet perspiciatis, animi porro nihil in ab quam? Consequatur ab veritatis rem tenetur sint, ducimus nihil nulla, accusamus tempore beatae, similique fuga alias minima autem rerum, totam sint natus, maiores. Veniam voluptatem, vitae at temporibus blanditiis odio. Deserunt facilis commodi debitis culpa, officia quos odit.</p>
+  <p>The Montebello Historical Society Newsletter Archive provides a look back at the events and history of this institution. The archives page is updated monthly and provides information about history during the month, upcoming event, and important updates. Take a look around and learn more about Montebello History!</p>
 </div>
 <div class="newsletter">
 <h2>Archive</h2>
@@ -64,8 +65,12 @@ title: Newsletter
     padding: 0;
 }
 
-.container>.content-panel>.main-content>.info>p{
-    padding: 20px;
+h3{
+  padding: 20px;
+}
+
+.info>p{
+  padding: 20px;
 }
 
 .main-content>.info>h2{
@@ -103,6 +108,14 @@ padding:1em !important;
 @media screen and (min-width: 75em) {
   .main-content>.newsletter{
     grid-area:news;
+  }
+
+  h3{
+    padding: 0;
+  }
+
+  .info>p{
+    padding: 0px;
   }
 
   .main-content>.info>img{
