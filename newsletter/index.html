@@ -7,54 +7,39 @@ description: The Montebello Historical Society Newsletter Archive provides a loo
   <p>The Montebello Historical Society Newsletter Archive provides a look back at the events and history of this institution. The archives page is updated monthly and provides information about history during the month, upcoming event, and important updates. Take a look around and learn more about Montebello History!</p>
 </div>
 <div class="newsletter">
-<h2>Archive</h2>
-<div class="news">
-  <h3>2017</h3>
-  <a href="../archive/newsletter.pdf">December 2017</a>
-  <a href="#">November 2017</a>
-  <a href="#">October 2017</a>
-  <a href="#">September 2017</a>
-  <a href="#">August 2017</a>
-  <a href="#">July 2017</a>
-  <a href="#">June 2017</a>
-  <a href="#">May 2017</a>
-  <a href="#">April 2017</a>
-  <a href="#">March 2017</a>
-  <a href="#">February 2017</a>
-  <a href="#">January 2017</a>
-</div>
-
-<div class="news">
-  <h3>2016</h3>
-  <a href="#">December 2016</a>
-  <a href="#">November 2016</a>
-  <a href="#">October 2016</a>
-  <a href="#">September 2016</a>
-  <a href="#">August 2017</a>
-  <a href="#">July 2016</a>
-  <a href="#">June 2016</a>
-  <a href="#">May 2016</a>
-  <a href="#">April 2016</a>
-  <a href="#">March 2016</a>
-  <a href="#">February 2016</a>
-  <a href="#">January 2016</a>
-</div>
-
-<div class="news">
-  <h3>2015</h3>
-  <a href="#">December 2015</a>
-  <a href="#">November 2015</a>
-  <a href="#">October 2015</a>
-  <a href="#">September 2015</a>
-  <a href="#">August 2015</a>
-  <a href="#">July 2015</a>
-  <a href="#">June 2015</a>
-  <a href="#">May 2015</a>
-  <a href="#">April 2015</a>
-  <a href="#">March 2015</a>
-  <a href="#">February 2015</a>
-  <a href="#">January 2015</a>
-</div>
+  <h2>Archive</h2>
+  <div class="news">
+    <h3>2017</h3>
+    {% for news in site.static_files %}
+      {% if news.path contains 'archive/2017' %}
+          <a href="{{news.path}}">{{news.basename}}</a>
+      {% endif %}
+    {% endfor %}
+  </div>
+  <div class="news">
+    <h3>2016</h3>
+    {% for news in site.static_files %}
+      {% if news.path contains 'archive/2016' %}
+          <a href="{{news.path}}">{{news.basename}}</a>
+      {% endif %}
+    {% endfor %}
+  </div>
+  <div class="news">
+    <h3>2015</h3>
+    {% for news in site.static_files %}
+      {% if news.path contains 'archive/2015' %}
+          <a href="{{news.path}}">{{news.basename}}</a>
+      {% endif %}
+    {% endfor %}
+  </div>
+  <div class="news">
+    <h3>2014</h3>
+    {% for news in site.static_files %}
+      {% if news.path contains 'archive/2014' %}
+          <a href="{{news.path}}">{{news.basename}}</a>
+      {% endif %}
+    {% endfor %}
+  </div>
 </div>
 
 <style media="screen">
@@ -67,6 +52,10 @@ description: The Montebello Historical Society Newsletter Archive provides a loo
 
 h3{
   padding: 20px;
+}
+
+.news>h3{
+  padding-left: 0px;
 }
 
 .info>p{
@@ -133,6 +122,7 @@ padding:1em !important;
     grid-gap:1em;
     grid-template-areas:
     ". info news";
+    margin-bottom: 1em;
   }
 }
 }
