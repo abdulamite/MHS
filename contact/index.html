@@ -8,11 +8,11 @@ description: Feel free to reach out to us to learn more about Montebello History
             <input type="email" placeholder="Email Address" name="Email" required>
             <textarea name="Message" rows="8" cols="80" placeholder="Message" maxlength="500" required></textarea>
             <div netlify-recaptcha data-callback="recaptchaCallback"></div>
-            <input type="submit" value="Submit" disabled id="submit">
+            <input type="submit" value="Submit" id="submit" disabled>
 </form>
 <script type="text/javascript">
 function recaptchaCallback() {
-    $('#submit').removeAttr('disabled');
+    document.querySelector('#submit').removeAttribute('disabled');
 };
 </script>
 
