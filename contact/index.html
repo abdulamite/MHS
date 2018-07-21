@@ -7,9 +7,15 @@ description: Feel free to reach out to us to learn more about Montebello History
             <input type="text" placeholder="Full Name" name="Full Name" required>
             <input type="email" placeholder="Email Address" name="Email" required>
             <textarea name="Message" rows="8" cols="80" placeholder="Message" maxlength="500" required></textarea>
-            <div netlify-recaptcha></div>
-            <input type="submit" value="Submit">
+            <div netlify-recaptcha data-callback="recaptchaCallback"></div>
+            <input type="submit" value="Submit" disabled id="submit">
 </form>
+<script type="text/javascript">
+function recaptchaCallback() {
+    $('#submit').removeAttr('disabled');
+};
+</script>
+
 <style>
 /*====================================================================  */
 /* form cards styles */
@@ -34,7 +40,7 @@ textarea{
   border: none;
 }
 
-.recaptcha{
+.netlify-recaptcha{
   margin: auto;
 }
 
