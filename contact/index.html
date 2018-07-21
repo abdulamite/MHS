@@ -4,6 +4,12 @@ title: Contact Us
 description: Feel free to reach out to us to learn more about Montebello History and volunteer opportunities.
 ---
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript">
+    function recaptcha_callback(){
+      alert("callback working");
+      $('#submit').prop("disabled", false);
+    }
+</script>
 <form name="contact" method="POST" netlify-recaptcha netlify>
             <input type="text" placeholder="Full Name" name="Full Name" required>
             <input type="email" placeholder="Email Address" name="Email" required>
@@ -11,13 +17,6 @@ description: Feel free to reach out to us to learn more about Montebello History
             <div netlify-recaptcha data-callback="recaptcha_callback"></div>
             <input type="submit" value="Submit" id="submit" disabled>
 </form>
-<script type="text/javascript">
-    function recaptcha_callback(){
-      alert("callback working");
-      $('#submit').prop("disabled", false);
-    }
-</script>
-
 <style>
 /*====================================================================  */
 /* form cards styles */
