@@ -3,10 +3,11 @@ layout: new_layout
 title: Contact Us
 description: Feel free to reach out to us to learn more about Montebello History and volunteer opportunities.
 ---
-<form name="contact" method="POST" netlify>
+<form name="contact" method="POST" netlify-recaptcha netlify>
             <input type="text" placeholder="Full Name" name="Full Name" required>
             <input type="email" placeholder="Email Address" name="Email" required>
             <textarea name="Message" rows="8" cols="80" placeholder="Message" maxlength="500" required></textarea>
+            <div netlify-recaptcha></div>
             <input type="submit" value="Submit">
 </form>
 <style>
