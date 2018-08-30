@@ -19,7 +19,10 @@
   <meta name="theme-color" content="#822b2f" />
   <title>Montebello Historical Society</title>
   <link rel="shortcut icon" href="imgs/logo.ico">
-<link href="https://fonts.googleapis.com/css?family=Cardo|Chivo" rel="stylesheet">  <link rel="stylesheet" href="../master.css">
+  <link href="https://fonts.googleapis.com/css?family=Cardo|Chivo" rel="stylesheet">  <link rel="stylesheet" href="../master.css">
+  <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+  <script src="/scripts/firebaseAuth.js"></script>
+  <script src="/scripts/home.js"></script>
 </head>
 <body>
   <div class="container" id="app">
@@ -35,36 +38,33 @@
           <li><a href="/history">History</a></li>
           <li><a href="/officers">Officers</a></li>
           <li><a href="/museum">Museum</a></li>
+          <li><a href="/events">Events</a></li>
           <li><a href="/newsletter">Newsletter</a></li>
           <li><a href="/contact">Contact Us</a></li>
         </ul>
       </nav>
       <div class="hero">
-        <img src="imgs/hero-banner.jpg" alt="Historic Photo">
       </div>
+      <div class="eventInfo"></div>
       <div class="main-content">
-        <blockquote class="quote">
-          <p>
-            A people without the knowledge of their past history, origin and culture is like a tree without roots.
-            <br>
-            -Marcus Garvey
-          </p>
+        <blockquote>
+          <div class="quote"></div>
+          -
+          <div class="author">
+          </div>
         </blockquote>
         <div class="features">
-          <div class="feature">
+          <div class="feature" id="feature-1">
             <img src="imgs/learn.jpg" alt="">
             <h3>Learn</h3>
-            <p>Discover Montebello's past. Who was Dona Lobo? Who built the Adobe? What was Montebello formally known as?</p>
           </div>
-          <div class="feature">
+          <div class="feature" id="feature-2">
             <img src="imgs/join.jpg" alt="">
             <h3>Explore</h3>
-            <p>Explore Monetebello's past from the Tongva to the city's recent history. Explore the historical Adobe which stands today as Montebello'soldest structure</p>
           </div>
-          <div class="feature">
+          <div class="feature" id="feature-3">
             <img src="imgs/explore.jpg" alt="">
             <h3>Connect</h3>
-            <p>Connect with the Montebello Historical Society and participate in local events. We are also open from 12-4 every Sunday. Free Admisson!</p>
           </div>
         </div>
         <div class="historical-image">
@@ -72,10 +72,6 @@
         </div>
         <div class="info">
           <h2>Adobe Museum</h2>
-          <p>Welcome to the Montebello Historical Society. We cordially invite everyone to visit the
-            Juan Matias Sanchez Adobe, Historic Site and Museum, located on the site of the oldest residence in Montebello.
-             The Adobe was built in 1844 about one mile from the site of the first San Gabriel Mission and was part of the 2,363-acre Rancho La Merced.</p>
-          <p> We are also working on new memorabilia for the Juan Sanchez room which showcases architecture of the mid-1800's with furnished rooms from the time period, Sanchez family artifacts, along with historical photos of the City.</p>
         </div>
         <div class="events-info">
           <img src="imgs/events.jpg" alt="Events Preview">
