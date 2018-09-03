@@ -10,18 +10,18 @@ ref.on("value", function(snapshot) {
     let data = snapshot.val();
     // define all items to substitue via db items
 
-    let currImage = 1;
-    const images = [data[6][1],data[7][1],data[8][1]];
-    const imageMeta = [data[6][2],data[7][2],data[8][2]];
+    // let currImage = 1;
+    // const images = [data[6][1],data[7][1],data[8][1]];
+    // const imageMeta = [data[6][2],data[7][2],data[8][2]];
 
     let learn = document.querySelector('#feature-1');
     let explore = document.querySelector('#feature-2');
     let connect = document.querySelector('#feature-3');
-    let adobe = document.querySelector('.info');
+    // let adobe = document.querySelector('.info');
     let quote = document.querySelector('.quote');
     let author = document.querySelector('.author');
     let hero = document.querySelector('.hero');
-    let eventInfo = document.querySelector('.eventInfo');
+    // let eventInfo = document.querySelector('.eventInfo');
 
     // create all elements for content
     let learnContent = document.createElement("p");
@@ -33,26 +33,26 @@ ref.on("value", function(snapshot) {
     let heroImageInfoTitle = document.createElement("H3");
 
 
-    setInterval(function changeImage(){
-        heroImage.style.opacity = 0;
-        setTimeout(function() {
-            heroImage.src=images[currImage];
-            if(!imageMeta[currImage]){
-                console.log('No Info Available');
-                eventInfo.style.display = 'none';
-            }
-            else{
-                heroImageInfoTitle.textContent=imageMeta[currImage];
-                eventInfo.style.display = 'block';
-            }
-            if(currImage <2){
-                currImage++
-            }else if(currImage =2){
-                currImage =0;
-            }
-            heroImage.style.opacity = 1;
-         }, 1300);
-    },15000);
+    // setInterval(function changeImage(){
+    //     heroImage.style.opacity = 0;
+    //     setTimeout(function() {
+    //         heroImage.src=images[currImage];
+    //         if(!imageMeta[currImage]){
+    //             console.log('No Info Available');
+    //             eventInfo.style.display = 'none';
+    //         }
+    //         else{
+    //             heroImageInfoTitle.textContent=imageMeta[currImage];
+    //             eventInfo.style.display = 'block';
+    //         }
+    //         if(currImage <2){
+    //             currImage++
+    //         }else if(currImage =2){
+    //             currImage =0;
+    //         }
+    //         heroImage.style.opacity = 1;
+    //      }, 1300);
+    // },15000);
 
     quoteContent.textContent = data[0][1];
     quote.appendChild(quoteContent);
@@ -80,21 +80,21 @@ ref.on("value", function(snapshot) {
         eventInfo.style.display = 'block';
     }
 
-    eventInfo.appendChild(heroImageInfoTitle);
-    eventInfo.classList.add('eventTitle');
+    // eventInfo.appendChild(heroImageInfoTitle);
+    // eventInfo.classList.add('eventTitle');
 
 
 
 
-    let adobeData = data[5][1].split("\n");
+    // let adobeData = data[5][1].split("\n");
 
-    for(let i=0;i<=adobeData.length;i++){
-        let content = adobeData[i];
-        // create paragraph element
-        let pContent = document.createElement("p");
-        pContent.textContent = content;
-        adobe.appendChild(pContent);
-    }
+    // for(let i=0;i<=adobeData.length;i++){
+    //     let content = adobeData[i];
+    //     // create paragraph element
+    //     let pContent = document.createElement("p");
+    //     pContent.textContent = content;
+    //     adobe.appendChild(pContent);
+    // }
 }, function (error) {
     console.log("Error: " + error.code);
 });
