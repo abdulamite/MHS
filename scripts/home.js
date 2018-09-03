@@ -72,13 +72,13 @@ ref.on("value", function(snapshot) {
     heroImage.src = data[6][1];
     hero.appendChild(heroImage);
 
-    if(!imageMeta[0]){
-        eventInfo.style.display = 'none';
-    }
-    else{
-        heroImageInfoTitle.textContent=imageMeta[0];
-        eventInfo.style.display = 'block';
-    }
+    // if(!imageMeta[0]){
+    //     eventInfo.style.display = 'none';
+    // }
+    // else{
+    //     heroImageInfoTitle.textContent=imageMeta[0];
+    //     eventInfo.style.display = 'block';
+    // }
 
     // eventInfo.appendChild(heroImageInfoTitle);
     // eventInfo.classList.add('eventTitle');
