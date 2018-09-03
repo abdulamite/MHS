@@ -17,7 +17,7 @@ ref.on("value", function(snapshot) {
     let learn = document.querySelector('#feature-1');
     let explore = document.querySelector('#feature-2');
     let connect = document.querySelector('#feature-3');
-    // let adobe = document.querySelector('.info');
+    let adobe = document.querySelector('.info');
     let quote = document.querySelector('.quote');
     let author = document.querySelector('.author');
     let hero = document.querySelector('.hero');
@@ -86,15 +86,15 @@ ref.on("value", function(snapshot) {
 
 
 
-    // let adobeData = data[5][1].split("\n");
+    let adobeData = data[5][1].split("\n");
 
-    // for(let i=0;i<=adobeData.length;i++){
-    //     let content = adobeData[i];
-    //     // create paragraph element
-    //     let pContent = document.createElement("p");
-    //     pContent.textContent = content;
-    //     adobe.appendChild(pContent);
-    // }
+    for(let i=0;i<=adobeData.length;i++){
+        let content = adobeData[i];
+        // create paragraph element
+        let pContent = document.createElement("p");
+        pContent.textContent = content;
+        adobe.appendChild(pContent);
+    }
 }, function (error) {
     console.log("Error: " + error.code);
 });
