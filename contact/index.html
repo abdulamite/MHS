@@ -26,8 +26,7 @@ function recaptchaCallback() {
               <option value="other">Other</option>
             </select>
             <textarea name="Message" rows="8" cols="80" placeholder="Message" maxlength="500" required></textarea>
-            <!-- <div class="g-recaptcha" data-sitekey="6LfVjWUUAAAAAOPO0RLUEmwGkwXXp6KtyfRcYzLu" data-callback="recaptchaCallback"></div> -->
-            <div class="g-recaptcha" data-netlify-recaptcha data-callback="recaptchaCallback"></div>
+            <div class="g-recaptcha" data-netlify-recaptcha data-netlify-callback="recaptchaCallback"></div>
             <input type="submit" value="Submit" id="submit" disabled>
 </form>
 <style>
