@@ -6,15 +6,15 @@ description: Feel free to reach out to us to learn more about Montebello History
 <script src='https://www.google.com/recaptcha/api.js'></script>
 
 <script type="text/javascript">
-function recaptchaCallback() {
-    let submit =  document.querySelector('#submit');
-    submit.style.backgroundColor="#822b2f";
-    submit.style.color="#fff";
-    submit.style.border="none";
-    submit.removeAttribute('disabled');
-};
+// function recaptchaCallback() {
+//     let submit =  document.querySelector('#submit');
+//     submit.style.backgroundColor="#822b2f";
+//     submit.style.color="#fff";
+//     submit.style.border="none";
+//     submit.removeAttribute('disabled');
+// };
 </script>
-<form name="contact_us" method="POST" netlify>
+<form name="contact" method="POST" netlify>
             <input type="text" placeholder="Full Name" name="Full Name" required>
             <input type="email" placeholder="Email Address" name="Email" required>
             <select required>
@@ -26,8 +26,8 @@ function recaptchaCallback() {
               <option value="other">Other</option>
             </select>
             <textarea name="Message" rows="8" cols="80" placeholder="Message" maxlength="500" required></textarea>
-            <div class="g-recaptcha" data-sitekey="6LfVjWUUAAAAAOPO0RLUEmwGkwXXp6KtyfRcYzLu" data-callback="recaptchaCallback"></div>
-            <input type="submit" value="Submit" id="submit" disabled>
+            <!-- <div class="g-recaptcha" data-sitekey="6LfVjWUUAAAAAOPO0RLUEmwGkwXXp6KtyfRcYzLu" data-callback="recaptchaCallback"></div> -->
+            <input type="submit" value="Submit" id="submit">
 </form>
 <style>
 /*====================================================================  */
