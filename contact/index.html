@@ -7,12 +7,24 @@ description: Feel free to reach out to us to learn more about Montebello History
 
 <script type="text/javascript">
 function recaptchaCallback() {
-    document.querySelector('#submit').removeAttribute('disabled');
+    let submit =  document.querySelector('#submit');
+    submit.style.backgroundColor="#822b2f";
+    submit.style.color="#fff";
+    submit.style.border="none";
+    submit.removeAttribute('disabled');
 };
 </script>
-<form name="contact" method="POST" netlify-recaptcha netlify>
+<form name="contact" method="POST" netlify>
             <input type="text" placeholder="Full Name" name="Full Name" required>
             <input type="email" placeholder="Email Address" name="Email" required>
+            <select required>
+              <option selected disabled> -- Select Category --</option>
+              <option value="information">General Information</option>
+              <option value="information">Membership Information</option>
+              <option value="volunteer">Volunteer Opportunities</option>
+              <option value="donations">Donations</option>
+              <option value="other">Other</option>
+            </select>
             <textarea name="Message" rows="8" cols="80" placeholder="Message" maxlength="500" required></textarea>
             <div class="g-recaptcha" data-sitekey="6LfVjWUUAAAAAOPO0RLUEmwGkwXXp6KtyfRcYzLu" data-callback="recaptchaCallback"></div>
             <input type="submit" value="Submit" id="submit" disabled>
@@ -25,20 +37,22 @@ function recaptchaCallback() {
   display: flex;
   flex-direction: column;
 }
-.info>form>input,textarea{
+.info>form>input,textarea,select{
   font-family: 'Crimson Text', serif;
   padding: 1em;
   font-size: 18px;
   border:solid black 1px;
   margin-bottom: 20px;
 }
+
 textarea{
   border: solid black 1px;
 }
 .info>form>input[type="submit"]{
-  background-color: #822b2f;
-  color: white;
-  border: none;
+  transition: .5s ease;
+  border:#822b2f solid 3px;
+  background-color: #fff;
+  color:black;
 }
 
 .g-recaptcha{
@@ -70,6 +84,10 @@ textarea{
       ". info ."
       ". info . "
       ". info ."
+    }
+
+    select{
+      height: 3em;
     }
   }
 }
