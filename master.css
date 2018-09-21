@@ -81,12 +81,25 @@ body{
 .container>.content-panel>.hero{
   max-width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   overflow: hidden;
 }
 .container>.content-panel>.hero>img{
   max-width: 100vw;
+  transition: 5s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+.eventTitle{
+  background-color: #822b2f;
+  padding:.75em;
+  color:white;
+  font-family: 'Cardo', serif;
+}
+
+.title{
+  text-align: center;
 }
 
 /*====================================================================  */
@@ -292,9 +305,5 @@ footer>img {
     .container>.content-panel>.hero>img{
       width: 100%;
   }
-
 }
-
-
-
-/* Extend page */
+}
