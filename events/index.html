@@ -1,104 +1,179 @@
+--- 
+layout: new_layout 
+title: Events 
+description: cool
 ---
-layout: new_layout
-title: Upcoming Events
-description: The Montebello Historical Society Newsletter Archive provides a look back at the events and history of this institution. The archives page is updated monthly and provides information about history during the month, upcoming event, and important updates. Take a look around and learn more about Montebello History!
----
-<img src="../imgs/BattleOfRioSanGabriel_EVENT-PROGRAM_2019_FullSizeColor-1.jpg" alt="Rio San Gabriel">  
+<script src="/scripts/events.js"></script>
+<div class="featured">
+  <img src="../imgs/MHS_Flyer_Oktoberfest.png" alt="">
+</div>
+<div class="events_feed">
+  <div class="connect">
+    <p>Interested in voluntering at our events? Send us a message and we will let you know what is available! </p>
+    <div class="connect-link">
+      <a href="/contact/">Contact</a>
+    </div>
+  </div>
+  <div class="events">
+    <div class="event_feed">
+    </div>
+  </div>
+</div>
+<!-- begin CSS -->
 <style media="screen">
-/*====================================================================  */
-/* Clean up headings styles */
-.container>.content-panel>.main-content>* {
-    padding: 0;
-}
+  /*====================================================================  */
 
-li{
-  list-style: none;
-}
+  /*====================================================================  */
 
-h3{
-  padding: 20px;
-  text-align:center;
-}
-
-.news>h3{
-  padding-left: 0px;
-}
-
-.info>p{
-  padding: 20px;
-}
-
-.main-content>.info>h2{
-text-align: center;
-}
-
-.main-content>.info>img{
-max-width: 100vw;
-height: auto;
-}
-
-footer a{
-  color:white;
-}
-
-/*====================================================================  */
-/* news block styles */
-.main-content>.newsletter>.news{
-display: flex;
-flex-direction: column;
-}
-.main-content>.newsletter{
-padding:1em !important;
-}
-.newsContainer{
-  padding-top:3em;
-  padding-bottom:3em;
-  padding-left:1em;
-  padding-right: 1em;
-  background-color: #95484c0d;
-  margin:1em;
-  margin-top:1em;
-  margin-bottom:1em;
-}
-
-
-/*====================================================================  */
-/*====================================================================  */
-/*====================================================================  */
-/*====================================================================  */
-/* Desktop Content  styles */
-
-@supports (grid-area:auto) {
-@media screen and (min-width: 75em) {
-  .main-content>.newsletter{
-    grid-area:news;
+  .info {
+    padding: 0px !important;
+    margin: 0;
   }
 
-  h3{
-    padding: 0;
+  .featured {
+    margin-top: 1em;
   }
 
-  .info>p{
-    padding: 0px;
+  .featured>img {
+    width: 100vw;
   }
 
-  .main-content>.info>img{
-    max-width: 100%;
-    height: auto;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden
+  .connect {
+    margin-bottom: 2em;
+  }
+
+  .connect>p {
+    margin: auto;
+    padding: 10px;
+    text-align: center
   }
 
 
-  .main-content{
-    display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
-    grid-gap:1em;
-    grid-template-areas:
-    ". info news";
+  .connect-link {
+    text-align: center;
+    text-decoration: none !important;
+    display: block;
+    font-family: 'Chivo', serif;
+    margin-top: 1em;
+    background-color: #822b2f;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: #FAFAFA;
+    width: 60%;
+    margin: auto;
+  }
+
+  .load-more {
     margin-bottom: 1em;
   }
-}
-}
+
+  .connect-link>a {
+    font-family: 'Chivo', serif;
+    text-decoration: none;
+  }
+
+  a:visited {
+    color: #120102;
+  }
+
+
+  .event {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-bottom: #cdd0d6 solid 1px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .event>.event-info {
+    padding: 1em;
+  }
+
+  .event>.event-info>p {
+    margin-bottom: 10px;
+
+  }
+
+  .event>img {
+    max-height: 100%;
+    width: auto;
+    margin: auto;
+  }
+
+
+  /*====================================================================  */
+
+  /*====================================================================  */
+
+  /* Desktop Content  styles */
+
+  @supports (grid-area:auto) {
+    @media screen and (min-width: 75em) {
+
+      .featured {
+        margin-top: none;
+      }
+
+      .featured>img {
+        height: 600px;
+        width: auto;
+        display: block;
+        margin: auto;
+      }
+
+      .connect {
+        grid-area: connect;
+        padding-left: 10px;
+        margin-bottom: 0em;
+      }
+
+      .events {
+        grid-area: events;
+      }
+
+      .connect>p {
+        padding: 0;
+        text-align: left;
+      }
+
+      .connect-link {
+        margin-top: 1em;
+        width: 100%;
+      }
+
+      /* Events feed style */
+      .events_feed {
+        margin-top: 1em;
+        display: grid;
+        grid-template-columns: 2.5fr 1fr;
+        grid-template-areas: "events connect";
+        grid-gap: 1em;
+      }
+
+
+      .event {
+        flex-wrap: nowrap;
+        padding: 0;
+        padding-bottom: 1em;
+      }
+      .event>.event-info {
+        margin-left: 1em;
+        padding: 0px;
+        flex:2;
+      }
+
+
+      h3 {
+        padding: 0;
+      }
+
+      .info>p {
+        padding: 0px;
+      }
+      .main-content {
+        grid-gap: 0;
+      }
+    }
+  }
 </style>
