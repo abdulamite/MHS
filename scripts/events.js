@@ -60,11 +60,15 @@ function getEvents() {
                     event.innerHTML=
                     `
                     <div class="event">
-                    <img src="${thumbLink}" alt="${item.title}">
+                      <div class="image_container">
+                        <a href="${item.link}" target="_blank">
+                          <img src="${thumbLink}" alt="${item.title}">
+                        </a>
+                      </div>
                     <div class="event-info">
-                      <p>
+                      <h3>
                         <b><a href="${item.link}" target="_blank">${item.title}</a></b>
-                      </p>
+                      </h3>
                       <p>${item.location}</p>
                       <p>${date_string}</p>
                       <p>${item.cost}</p>
