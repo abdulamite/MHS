@@ -3,7 +3,6 @@ function getEvents() {
         const d1 = fetch('https://jm-mhs.firebaseio.com/events.json?orderBy="computed_date"')
             .then(data => data.json())
             .then(data => {
-                console.log(data);
                 const eventFeed = document.querySelector('.event_feed');
                 let sorted = data.sort(function(a,b){
                     return a.computed_date - b.computed_date 
